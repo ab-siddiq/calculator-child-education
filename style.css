@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#calculator {
+    margin: 0;
+    padding: 0;
+}
+
+
+#calculator hr.line {
+    width: 80px;
+    height: 4px;
+    background-color: #B02A30;
+    opacity: 100%
+}
+
+#calculator .wealth-creation {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center
+}
+
+#calculator .calculator-area {
+    padding: 40px 60px;
+    box-shadow: 10px 10px 30px grey;
+    border-radius: 10px;
+}
+
+#calculator .name-input {
+    background-color: #FDF5E1;
+    padding: 80px 30px;
+    border-radius: 10px;
+    min-height: 330px;
+}
+
+#calculator ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+
+#calculator ol li {
+    counter-increment: my-awesome-counter;
+}
+
+#calculator ol li::before {
+    content: counter(my-awesome-counter) ") ";
+}
+
+#calculator .calculator-area-input input[type=text], #calculator .calculator-area-input input[type=number]{
+    border-radius: 40px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border: 1px solid #fff;
+}
+
+#calculator .calculator-area-input input[type=text]:hover , #calculator .calculator-area-input input[type=number]:hover {
+
+    border: 1px solid #B02A30;
+}
+
+#calculator .calculator-area button {
+    border-radius: 50px;
+    background-color: #B02A30;
+    border: 1px solid #fff;
+}
+
+#calculator .calculator-area button:hover {
+    background-color: #FDF5E1;
+    border: 1px solid #B02A30;
+    color: #B02A30;
+}
+
+#calculator .calculator-area-input input[type=radio]:checked:after {
+    background-color: red;
+}
+
+/* #calculator  .question-box{margin:50px 200px;} */
+#calculator .question-box h5 {
+    background-color: #B02A30;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+#calculator .question-box .question-area .form-check {
+    font-size: 20px;
+}
+
+#calculator .question-area,
+#calculator .calculate-demographic-score {
+    background-color: #FDF5E1;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+#wealth-question-two,
+#wealth-question-three,
+#wealth-question-four,
+#wealth-question-five,
+#wealth-question-six,
+#wealth-question-seven,
+
+#age-field,
+#annual-income-field,
+#age-field,
+#child-age-now-field,
+#meet-goal-at-age-field,
+#goal-cost-field,
+#possible-investment-field,
+#risk-appetite-field,
+#wealth-demographic-calculation,
+#wealth-demographic-risk-quotient, .question-weight,#calculator-output {
+    display: none;
+}
+
+#calculator .question-weight {
+    background-color: #31AB4D;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* #calculator-annual-income,
+#calculator-financial-income,
+#calculator-current-age,
+#calculator-age-goal,
+#calculator-upfront-investment,
+#calculator-risk,#wealth-risk-question-area, #wealth-demographic-risk-quotient {
+    display: none;
+} */
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+}
+
+#calculator .output-style{
+    background-color: #EFF7FE;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 20px 10px;
+}
+
+#calculator strong{font-size: 2rem; color: #EF4B27;}
+#calculator .back-button{
+    background-color: #EF4B2E;
+    color: #fff;
+}
+#calculator .calculate-button {
+    background-color: #F27023;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#calculator .calculate-button:hover{background-color: #fff; border: 1px solid #F27023; color: #F27023;}
