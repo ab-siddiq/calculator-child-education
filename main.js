@@ -9,7 +9,7 @@ const displayHide = (displayID = '', hideID = '', inputValueID = '', outputValue
     if (inputValueID != '' && outputValueID != '') {
         document.getElementById(outputValueID).innerHTML = document.getElementById(inputValueID).value;
         document.getElementById(outputValueID).style.fontWeight = 'bold';
-        document.getElementById(outputValueID).style.color = '#EF4B27';
+        // document.getElementById(outputValueID).style.color = '#EF4B27';
         // const displayOutput = Array.from(document.querySelector('.display-output'));
         // displayOutput.forEach(element => {
         //     element.style.color = 'red';
@@ -42,7 +42,7 @@ const getInputValue = () => {
  
     let storeInputValues = [];
     let getInputValues = Array.from(document.getElementsByClassName('display-output'))
-    getInputValues.forEach(el => inputValuesArray.push(el.innerHTML)  );
+    getInputValues.forEach(el => storeInputValues.push(el.innerHTML)  );
     
     [yourName, age,annualIncome, ageNow, atAge, presentCost, possibleInvestment,risk] = storeInputValues;
          
