@@ -9,6 +9,12 @@ const displayHide = (displayID = '', hideID = '', inputValueID = '', outputValue
     if (inputValueID != '' && outputValueID != '') {
         document.getElementById(outputValueID).innerHTML = document.getElementById(inputValueID).value;
         document.getElementById(outputValueID).style.fontWeight = 'bold';
+        document.getElementById(outputValueID).style.color = '#EF4B27';
+        // const displayOutput = Array.from(document.querySelector('.display-output'));
+        // displayOutput.forEach(element => {
+        //     element.style.color = 'red';
+        // });
+        
         // document.querySelectorAll('li#'+outputValueID).style.color = 'red';
         console.log(document.getElementById(inputValueID).value);
 
@@ -33,28 +39,24 @@ const getSetRadioButtonValue = (inputID, outputID) => {
     }
 }
 const getInputValue = () => {
-    let name = callInputID('name-display');
-    let age = parseFloat(callInputID('age-display'));
-    let annualIncome = parseFloat(callInputID('annual-income-display'));
-    let childAgeNow = parseFloat(callInputID('child-age-now-display'));
-    let meetGoalAge = parseFloat(callInputID('meet-goal-at-age-display'));
-    let goalCost = parseFloat(callInputID('goal-cost-display'));
-    let possibleInvestment = parseFloat(callInputID('possible-investment-display'));
-    let risk = callInputID('risk-display');
-    console.log(risk);
-
-
+ 
+    let storeInputValues = [];
+    let getInputValues = Array.from(document.getElementsByClassName('display-output'))
+    getInputValues.forEach(el => inputValuesArray.push(el.innerHTML)  );
+    
+    [yourName, age,annualIncome, ageNow, atAge, presentCost, possibleInvestment,risk] = storeInputValues;
+         
     const inputValues = {
-        name: name,
-        age: age,
-        annualIncome: annualIncome,
-        childAgeNow: childAgeNow,
-        ageGoal: meetGoalAge,
-        goalCost: goalCost,
-        possibleInvestment: possibleInvestment,
+        name: yourName,
+        age: parseFloat(age),
+        annualIncome: parseFloat(annualIncome),
+        childAgeNow: parseFloat(ageNow),
+        ageGoal: parseFloat(atAge),
+        goalCost: parseFloat(presentCost),
+        possibleInvestment: parseFloat(possibleInvestment),
         risk: risk,
     }
-    console.log(inputValues);
+    // console.log(inputValues);
     calculationInvestorInput(inputValues);
 }
 
