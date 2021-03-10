@@ -9,13 +9,7 @@ const displayHide = (displayID = '', hideID = '', inputValueID = '', outputValue
     if (inputValueID != '' && outputValueID != '') {
         document.getElementById(outputValueID).innerHTML = document.getElementById(inputValueID).value;
         document.getElementById(outputValueID).style.fontWeight = 'bold';
-        // document.getElementById(outputValueID).style.color = '#EF4B27';
-        // const displayOutput = Array.from(document.querySelector('.display-output'));
-        // displayOutput.forEach(element => {
-        //     element.style.color = 'red';
-        // });
-        
-        // document.querySelectorAll('li#'+outputValueID).style.color = 'red';
+       
         console.log(document.getElementById(inputValueID).value);
 
     }
@@ -105,8 +99,8 @@ const showOutput = (outputValues) => {
     console.log(outputValues);
     document.querySelector('.output-top').innerHTML = `
         <p class="text-justify"> 
-        Dear Mr/ Mrs. <strong> ${outputValues.name} </strong>When your Child will be at the Age of  <strong> ${outputValues.ageGoal}</strong> years You are to have <strong>${outputValues.fv1} Taka </strong>For the Event
-        The Inflation is considered at <strong>${outputValues.inflationPercent}%</strong> , And The return is Estimated to be <strong>${outputValues.estimatedPercent}%</strong>
+        Dear Mr/ Mrs. <strong> ${outputValues.name} </strong>When your Child will be at the Age of  <strong> ${outputValues.ageGoal}</strong> years You are to have <strong>${outputValues.fv1} Taka </strong>For the Education Plan<br>
+        <br> <br> The Inflation is considered at <strong>${outputValues.inflationPercent}%</strong> , And The return is Estimated to be <strong>${outputValues.estimatedPercent}%</strong>
         </p>
         `
     document.querySelector('.output-bottom-left').innerHTML = `
