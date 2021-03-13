@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +30,7 @@
                     </div>
                     <!-- middle part -->
                     <div class="col-lg-6 calculator-area-input">
-                        <h2 class="">Hi User, let's take a step closer to your dreams</h2>
+                        <h2 class="">Hi <span id="user"></span> User, let's take a step closer to your dreams</h2>
                         <p class="">We look forward to help create wealth for you</p>
                         <!-- -name -->
                         <div id="name-field" class="name-input">
@@ -37,7 +40,7 @@
                                     placeholder="Your good name">
                             </div>
                             <div class="ms-0">
-                                <button onclick="displayHide('age-field','name-field','name-input','name-display')" id="wealth-name-next" class="btn btn-primary">Next</button>
+                                <button onclick="displayHide('age-field','name-field','name-input','name-display'); user('name-input','user')" id="wealth-name-next" class="btn btn-primary">Next</button>
                             </div>
                         </div>
                          <!-- current-age -->
@@ -706,16 +709,15 @@
                     <button onclick="displayHide('calculator-area','calculator-output')" class="btn back-button">Back</button>
 
                 </div>
-                <div class="row output-style">
-                    <div class="col output-top">
+                <div class="row ">
+                    <div class="col-12 output-top output-style">
                         
                     </div>
-                </div>
-                <div class="row output-style">
-                    <div class="col-12 output-bottom-left">
+                
+                    <div class="col-12 output-middle output-style">
                         
                     </div>
-                    <div class="col-12 output-bottom-right">
+                    <div class="col-12 output-bottom output-style">
                         
                     </div>
                     <div class="col-12 fv2">
