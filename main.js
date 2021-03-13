@@ -1,4 +1,8 @@
-
+const user = (getID, setID) =>{
+    document.getElementById(setID).innerHTML = document.getElementById(getID).value;
+    document.getElementById(setID).style.color = '#EF4B27';
+    document.getElementById(setID).style.textTransform = 'uppercase';
+}
 
 const displayHide = (displayID = '', hideID = '', inputValueID = '', outputValueID = '') => {
 
@@ -15,9 +19,7 @@ const displayHide = (displayID = '', hideID = '', inputValueID = '', outputValue
     }
 
 }
-const user = (getID, setID) =>{
-    document.getElementById(setID).innerHTML = document.getElementById(getID).value;
-}
+
 const getSetRadioButtonValue = (inputID, outputID) => {
     let inputValue = document.getElementById(inputID).value;
 

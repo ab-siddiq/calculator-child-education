@@ -145,10 +145,7 @@
     border-radius: 10px;
     margin: 10px 10px;
 }
-#calculator #user{
-    font-size: 2rem; color: #EF4B27;
-    text-transform: uppercase;
-}
+
 #calculator strong{font-size: 2rem; color: #EF4B27;}
 #calculator .back-button{
     background-color: #EF4B2E;
