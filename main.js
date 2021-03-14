@@ -83,10 +83,16 @@ const calculationInvestorInput = (inputValues) => {
     let cfv2 = inputValues.possibleInvestment * (Math.pow((1 + estimatedPercent / 100), ageDifference));
     let cfv = cfv1 - cfv2;
     let cpmt = (cfv * r) / (Math.pow((1 + r), npr) - 1);
-    fv1 = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(cfv1);
-    fv2 = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(cfv2);
-    fv = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(cfv);
-    pmt = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(cpmt);
+
+    let fixedFV1 = cfv1.toFixed(2);
+    let fixedFV2 = cfv2.toFixed(2);
+    let fixedFV = cfv.toFixed(2);
+    let fixedPMT = cpmt.toFixed(2);
+
+    fv1 = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 15 }).format(fixedFV1);
+    fv2 = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 15 }).format(fixedFV2);
+    fv = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 15 }).format(fixedFV);
+    pmt = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 15 }).format(fixedPMT);
 
 
     console.log('fv1=>', fv1, 'fv2=>', fv2, 'fv=>', fv, 'pmt=>', pmt);
